@@ -1,6 +1,7 @@
 import GlassPane from "@/components/glass-pane";
 import "@/styles/global.css";
 import { Inter } from "next/font/google";
+import styles from "./page.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
