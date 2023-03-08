@@ -1,3 +1,3 @@
-export const hashPassword = (password: string) => {
-  return "";
+export const hashPassword = async (password: string) => {
+  return await password;
 };
