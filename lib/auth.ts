@@ -10,8 +10,6 @@ import { db } from "./db";
 interface User {
   id: string;
   email: string;
-  firstName?: string;
-  lastName?: string;
 }
 export const hashPassword = (password: string) => bcrypt.hash(password, 10);
 

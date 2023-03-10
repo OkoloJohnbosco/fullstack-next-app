@@ -79,7 +79,7 @@ export default function AuthForm({ mode }: { mode: "register" | "signin" }) {
                   required
                   placeholder="First Name"
                   value={formState.firstName}
-                  className="border-solid border-gray border-2 px-6 py-2 text-lg rounded-3xl w-full"
+                  className="border-solid border-gray border-2 px-6 py-2 rounded-3xl text-lg w-full"
                   onChange={(e) =>
                     setFormState((s) => ({ ...s, firstName: e.target.value }))
                   }
