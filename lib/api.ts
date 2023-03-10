@@ -28,7 +28,7 @@ export const fetcher = async ({
 
   if (json) {
     const data = await res.json();
-    return data;
+    return data.data;
   }
 };
 
