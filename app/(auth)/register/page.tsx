@@ -1,7 +1,7 @@
-import React from "react";
+// signin/page.tsx
 
-function Register() {
-  return <div>Register</div>;
+import AuthForm from "@/components/auth-form";
+
+export default function Register() {
+  return <AuthForm mode="register" />;
 }
-
-export default Register;
