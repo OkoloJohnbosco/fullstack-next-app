@@ -30,6 +30,7 @@ export default async function register(
     res.status(201);
     res.end();
   } else {
+    res.json({ error: "Registration failed" });
     res.status(402);
     res.end();
   }

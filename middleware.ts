@@ -31,8 +31,7 @@ export default async function middleware(req: NextRequest, res: NextResponse) {
   }
 
   const jwt = req.cookies.get(process.env.COOKIE_NAME as string);
-  console.log(req, "req from cookie");
-  console.log(jwt, "jwt from cookie");
+
   if (!jwt) {
     req.nextUrl.pathname = "/signin";
     return NextResponse.redirect(req.nextUrl);
