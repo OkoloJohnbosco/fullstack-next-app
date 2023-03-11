@@ -1,11 +1,7 @@
-import React from "react";
+// signin/page.tsx
 
-function Signin() {
-  return (
-    <div>
-      <p className="text-[2xl] text-slate-400 ">Johnb</p>
-    </div>
-  );
+import AuthForm from "@/components/auth-form";
+
+export default function Signin() {
+  return <AuthForm mode="signin" />;
 }
-
-export default Signin;

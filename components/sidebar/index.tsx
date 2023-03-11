@@ -1,7 +1,7 @@
-import Image from "next/image";
-import logo from "@/assets/images/logo.png";
-import SidebarLink from "../sidebarlink";
 import Card from "../card";
+import Image from "next/image";
+import SidebarLink from "../sidebarlink";
+import logo from "@/assets/images/logo.svg";
 
 export interface LinkProp {
   label: string;
@@ -28,7 +28,7 @@ const Sidebar = () => {
   return (
     <Card className="h-full w-40 flex items-center justify-between flex-wrap">
       <div className="w-full flex justify-center items-center">
-        <Image src={logo} alt="Able logo" priority className="w-14" />
+        <Image src={logo} alt="Able logo" priority className="w-32" />
       </div>
       {links.map((link) => (
         <SidebarLink key="label" link={link} />
