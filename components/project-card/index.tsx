@@ -1,6 +1,7 @@
+import { Prisma, TASK_STATUS } from "@prisma/client";
+
 import Card from "../card";
 import { FC } from "react";
-import { Prisma } from "@prisma/client";
 import clsx from "clsx";
 
 const projectWithTasks = Prisma.validator<Prisma.ProjectArgs>()({
@@ -19,7 +20,7 @@ const formatDate = (date: string | Date) =>
 
 const ProjectCard: FC<{ project: ProjectWithTasks }> = ({ project }) => {
   const completedCount = project.tasks.filter(
-    (t) => t.status === "COMPLETED"
+    (t) => t.status === TASK_STATUS.COMPLETED
   ).length;
   const progress = Math.ceil((completedCount / project.tasks.length) * 100);
 
