@@ -57,3 +57,11 @@ export const createNewProject = (name: string) => {
     body: { name },
   });
 };
+
+export const createNewTask = (name: string) => {
+  return fetcher({
+    url: "/api/task",
+    method: "POST",
+    body: { name },
+  });
+};
