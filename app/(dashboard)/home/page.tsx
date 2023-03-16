@@ -47,7 +47,7 @@ export default async function Page() {
           <div className="w-1/3 p-3">{/* new project here */}</div>
         </div>
         <div className="mt-6 flex-2 grow w-full flex">
-          <div className="w-full">{/* tasks here */}Home</div>
+          <div className="w-full">{/* tasks here */}</div>
         </div>
       </div>
     </div>
