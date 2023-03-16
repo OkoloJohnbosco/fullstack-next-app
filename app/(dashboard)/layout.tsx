@@ -19,6 +19,7 @@ export default function DashboardRootLayout({
           <Sidebar />
           {children}
         </GlassPane>
+        <div id="modal" />
       </body>
     </html>
   );
