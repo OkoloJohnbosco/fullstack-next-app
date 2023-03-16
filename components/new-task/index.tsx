@@ -5,12 +5,12 @@ import { FormEvent, useState, useTransition } from "react";
 import Button from "../button";
 import Input from "../input";
 import Modal from "react-modal";
-import { createNewProject } from "@/lib/api";
+import { createNewTask } from "@/lib/api";
 import { useRouter } from "next/navigation";
 
 Modal.setAppElement("#modal");
 
-const NewProject = () => {
+const NewTask = ({ projectId }: { projectId: string }) => {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -18,9 +18,10 @@ const NewProject = () => {
   const closeModal = () => setIsOpen(false);
   const [name, setName] = useState("");
 
+  console.log(projectId, "from new task component");
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await createNewProject(name);
+    await createNewTask(name);
     startTransition(() => {
       // Refresh the current route and fetch new data from the server without
       // losing client-side browser or React state.
@@ -65,4 +66,4 @@ const NewProject = () => {
   );
 };
 
-export default NewProject;
+export default NewTask;
