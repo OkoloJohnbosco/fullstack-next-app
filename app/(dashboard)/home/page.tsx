@@ -55,7 +55,7 @@ export default async function Page() {
           <div className="w-full">
             {/* tasks here */}
             {/* @ts-expect-error  Server Component */}
-            <TasksCard title="Boss" />
+            <TasksCard />
           </div>
         </div>
       </div>
