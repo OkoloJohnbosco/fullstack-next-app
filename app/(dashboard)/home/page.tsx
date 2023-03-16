@@ -3,6 +3,7 @@ import GreetingsSkeleton from "@/components/greeting-skeleton";
 import Link from "next/link";
 import ProjectCard from "@/components/project-card";
 import { Suspense } from "react";
+import TasksCard from "@/components/task-card";
 import { cookies } from "next/headers";
 import { db } from "@/lib/db";
 import { delay } from "@/lib/async";
@@ -31,7 +32,7 @@ export default async function Page() {
         <div className="flex-1 grow flex">
           {/** greetings here */}
           <Suspense fallback={<GreetingsSkeleton />}>
-            {/* @ts-expect-error */}
+            {/* @ts-expect-error Server Component */}
             <Greetings />
           </Suspense>
         </div>
@@ -47,7 +48,11 @@ export default async function Page() {
           <div className="w-1/3 p-3">{/* new project here */}</div>
         </div>
         <div className="mt-6 flex-2 grow w-full flex">
-          <div className="w-full">{/* tasks here */}</div>
+          <div className="w-full">
+            {/* tasks here */}
+            {/* @ts-expect-error  Server Component */}
+            <TasksCard title="Boss" />
+          </div>
         </div>
       </div>
     </div>

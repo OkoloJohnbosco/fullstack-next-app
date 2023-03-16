@@ -33,7 +33,7 @@ const TasksCard = async ({
   tasks,
 }: {
   title: string;
-  tasks: Task[];
+  tasks?: Task[];
 }) => {
   const data = tasks ?? (await getData());
 
