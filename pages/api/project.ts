@@ -18,5 +18,5 @@ export default async function handler(
     },
   });
 
-  res.json({ data: { message: "ok" } });
+  res.json({ data: { message: "Successfully created a project" } });
 }
